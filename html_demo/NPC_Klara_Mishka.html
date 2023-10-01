@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+                    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+                    
+                    
+                    
+                    </head>
+                    <body>
+                            <div data-role="page" id="pageone">
+                              <div data-role="header">
+                                <h1>Devotress & Mishka</h1> 
+                                <button id="collapsible1">Expand all unique</button>
+                                <button id="collapsible2">Collapse all</button>
+                              </div>
+                          <div data-role="main" class="ui-content">
+                        <div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525510">1.</h1><p class="525510">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525511">1.</h1><p class="525511">1.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529288">1.</h1><p class="529288">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529289">1.</h1><p class="529289">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>4.Devotress, 2 replies</h1><p class="529290">4.</p><p class="529291">4.</p></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535284">1.</h1><p class="535284">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535285">1.</h1><p class="535285">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535286">1.</h1><p class="535286">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535287">3.</h1><p class="535287">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535288">3.</h1><p class="535288">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Devotress, 2 replies</h1><p class="535289">6.</p><p class="535290">6.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535291">3.</h1><p class="535291">3.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535292">1.</h1><p class="535292">1.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535293">1.</h1><p class="535293">1.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="540539">1.</h1><p class="540539">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>2.Devotress, 2 replies</h1><p class="540540">2.</p><p class="540799">2.</p></div></div></div>
+                
+                        <script>
+                    
+            
+            
+            
+            window.onload = function func(){
+            button1=document.getElementById("collapsible1");
+            button2=document.getElementById("collapsible2");
+            button1.onclick = function(){
+            
+            $( ".collapsible" ).collapsible( "expand" );
+            }
+            button2.onclick = function(){
+            
+            $('[data-role="collapsible"]').collapsible( "collapse" );
+            }
+            }
+            
+            
+                  
+                    inarr=[525510, 525511, 529288, 529289, 529290, 529291, 535284, 535285, 535286, 535287, 535288, 535289, 535290, 535291, 535292, 535293, 540539, 540540, 540799];
+                    textarr=["Mishka: I have already told you - I don't play with you any more!  You guide unfairly. You use magic.", "Devotress: It's the first time I have ever seen you.", 'Devotress: And what did I tell you?', "Mishka: And you said you would never return  at any price, because you like me. Don't you like me any more?", 'Devotress: I do.', 'Devotress: That all loomed to you.', "Mishka: If it weren't for your care about me who will ever breath in life to our city again? I will have to do so many things in five or ten years... Thank you, thank you!", 'Devotress: You think this city is still able to recover its life?', "Mishka: Definitely. Of course, it won't be easy. But one always has to fight for life, otherwise it's not real. You can not tear off the umbilical cord, that has been feeding all of us since the time of world creation. It has already found death almost everywhere.", 'Devotress: Is it really worth the effort to do your best for the sake of such miserable place.', "Mishka: And what about my friends? I won't be able to do anything without them. Are they alive? Is it possible to visit them already?", "Devotress: I don't know. I wanted to take care only about you.", 'Devotress: Not yet. My labor is not finished.', 'Devotress: Yes. At least it is still alive here. You still do remember what was your origin.', "Devotress: Don't thank. I just suddenly felt pity for you.", 'Devotress: Live. Do what you should do.', "Mishka: Have you forgotten something? We've just talked about everything...", "Devotress: I don't remember! When was it ? A while ago...", "Devotress: Yes, I've just come back... and where can I look in the mirror?"];
+                    
+                    for (i = 0; i < inarr.length; i++) {
+                    
+                    $('.'+inarr[i]).each(function(index, obj)
+                    {
+                      $(this).text($(this).text()+textarr[i]);
+                    });
+                    }
+                    </script>
+                    </body>
+                    </html>

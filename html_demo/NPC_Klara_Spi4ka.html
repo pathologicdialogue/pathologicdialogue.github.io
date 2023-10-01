@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+                    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+                    
+                    
+                    
+                    </head>
+                    <body>
+                            <div data-role="page" id="pageone">
+                              <div data-role="header">
+                                <h1>Devotress & Spichka</h1> 
+                                <button id="collapsible1">Expand all unique</button>
+                                <button id="collapsible2">Collapse all</button>
+                              </div>
+                          <div data-role="main" class="ui-content">
+                        <div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525525">1.</h1><p class="525525">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525526">1.</h1><p class="525526">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529273">1.</h1><p class="529273">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529272">3.</h1><p class="529272">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529275">3.</h1><p class="529275">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529277">5.</h1><p class="529277">5.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529274">3.</h1><p class="529274">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529276">3.</h1><p class="529276">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529278">5.</h1><p class="529278">5.</p></div></div></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526413">1.</h1><p class="526413">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526414">1.</h1><p class="526414">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528978">1.</h1><p class="528978">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528980">3.</h1><p class="528980">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528981">3.</h1><p class="528981">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528979">5.</h1><p class="528979">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526415">5.</h1><p class="526415">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526416">7.</h1><p class="526416">7.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526417">7.</h1><p class="526417">7.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526418">9.</h1><p class="526418">9.</p></div></div></div></div></div></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526419">1.</h1><p class="526419">1.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528977">1.</h1><p class="528977">1.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535284">1.</h1><p class="535284">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535285">1.</h1><p class="535285">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535286">1.</h1><p class="535286">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535287">3.</h1><p class="535287">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535288">3.</h1><p class="535288">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Devotress, 2 replies</h1><p class="535289">6.</p><p class="535290">6.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535291">3.</h1><p class="535291">3.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535292">1.</h1><p class="535292">1.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535293">1.</h1><p class="535293">1.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="540545">1.</h1><p class="540545">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>2.Devotress, 2 replies</h1><p class="540546">2.</p><p class="540798">2.</p></div></div></div>
+                
+                        <script>
+                    
+            
+            
+            
+            window.onload = function func(){
+            button1=document.getElementById("collapsible1");
+            button2=document.getElementById("collapsible2");
+            button1.onclick = function(){
+            
+            $( ".collapsible" ).collapsible( "expand" );
+            }
+            button2.onclick = function(){
+            
+            $('[data-role="collapsible"]').collapsible( "collapse" );
+            }
+            }
+            
+            
+                  
+                    inarr=[525525, 525526, 529273, 529272, 529275, 529277, 529274, 529276, 529278, 526413, 526414, 528978, 528980, 528981, 528979, 526415, 526416, 526417, 526418, 526419, 528977, 535284, 535285, 535286, 535287, 535288, 535289, 535290, 535291, 535292, 535293, 540545, 540546, 540798];
+                    textarr=['Spichka: Hello, Klara! Did you notice, see me watching you? I am Spichka.', 'Devotress: Did you watch me?', "Spichka: Sorry. I often do so. I like to  interfere in everything what one shouldn't get into. Probably that is the reason why I am called a thief. Why are you called a thief?", "Devotress: Yes, I am called a thief. But I  don't realize myself what for. I have not stolen anything.", 'Spichka: Maybe you will  have to. Watch out, be careful.', 'Devotress: So I am tarred with a certain brush for an uncommitted crime. And you are a funny fellow.', "Devotress: Am I called so? I don't remember I have stolen  anything.", "Spichka: It often happens. You have something stolen and don't remember. It may be something important or something that doesn't make the pocket heavy. Possibly, a strange name?", 'Devotress: My name comes from those which can be borrowed without punishment.', "Spichka: You know, I didn't believe from the very beginning that you are the disease...", 'Devotress: Spichka, hey Spichka! Let us outwit Mother Keeper?', "Spichka: Taya Tychik? It's not worth outwitting her. Show her a finger and she will outwit herself. No, let's better remind Khan who is master in the house!", 'Devotress: Wait! Does she like fairy tales? Well, Taya...', 'Spichka: She likes. Yet, she knows all of them. Odongs brought her up, they are great tale-tellers. They have narrated everything to her!', 'Devotress: Mother says, you led a unique narrator to her.', "Spichka: Oh! That's what it is. I led nobody... I didn't even manage to trace him. It was my Albino. Did you see him whispering her tales and she was glad and said that one was allegedly about me, a valuable tale. She gave him generous presents. She waited for the continuation - they were driven in that very night.", 'Devotress: Oh, what was that for a tale?', "Spichka: Why do you want to know it? Want a present? She is not for presents... You'd better composed your own tale. You are sure to do it. If you are a creation of the Steppe, Steppe will prompt you.", 'Devotress: You are the same...', 'Devotress: Well, look at me, look at me better...', 'Devotress: Well done. You are brave.', "Spichka: If it weren't for your care about me who will ever breath in life to our city again? I will have to do so many things in five or ten years... Thank you, thank you!", 'Devotress: You think this city is still able to recover its life?', "Spichka: Definitely. Of course, it won't be easy. But one always has to fight for life, otherwise it's not real. You can not tear off the umbilical cord, that has been feeding all of us since the time of world creation. It has already found death almost everywhere.", 'Devotress: Is it really worth the effort to do your best for the sake of such miserable place.', "Spichka: And what about my friends? I won't be able to do anything without them. Are they alive? Is it possible to visit them already?", "Devotress: I don't know. I wanted to take care only about you.", 'Devotress: Not yet. My labor is not finished.', 'Devotress: Yes. At least it is still alive here. You still do remember what was your origin.', "Devotress: Don't thank. I just suddenly felt pity for you.", 'Devotress: Live. Do what you should do.', 'Spichka: You are bothering me. I want to stay alone.', 'Devotress: Am I bothering? Strange...', "Devotress: I'll just have a rest a little here..."];
+                    
+                    for (i = 0; i < inarr.length; i++) {
+                    
+                    $('.'+inarr[i]).each(function(index, obj)
+                    {
+                      $(this).text($(this).text()+textarr[i]);
+                    });
+                    }
+                    </script>
+                    </body>
+                    </html>
