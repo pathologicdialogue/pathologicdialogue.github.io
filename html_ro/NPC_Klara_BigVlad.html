@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+                    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+                    
+                    
+                    
+                    </head>
+                    <body>
+                            <div data-role="page" id="pageone">
+                              <div data-role="header">
+                                <h1>Самозванка & Влад Ольгимский</h1> 
+                                <button id="collapsible1">Развернуть все уникальные</button>
+                                <button id="collapsible2">Свернуть все</button>
+                              </div>
+                          <div data-role="main" class="ui-content">
+                        <div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525245">1.</h1><p class="525245">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525246">1.</h1><p class="525246">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529152">1.</h1><p class="529152">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>4.Самозванка, 2 реплики</h1><p class="529153">4.</p><p class="529155">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529154">3.</h1><p class="529154">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Самозванка, 2 реплики</h1><p class="529156">6.</p><p class="529157">6.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525247">5.</h1><p class="525247">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525248">7.</h1><p class="525248">7.</p></div></div></div></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525249">1.</h1><p class="525249">1.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529151">1.</h1><p class="529151">1.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525468">1.</h1><p class="525468">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525469">1.</h1><p class="525469">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529292">1.</h1><p class="529292">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>4.Самозванка, 2 реплики</h1><p class="529293">4.</p><p class="529294">4.</p></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535284">1.</h1><p class="535284">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535285">1.</h1><p class="535285">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535286">1.</h1><p class="535286">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535287">3.</h1><p class="535287">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535288">3.</h1><p class="535288">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Самозванка, 2 реплики</h1><p class="535289">6.</p><p class="535290">6.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535291">3.</h1><p class="535291">3.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535292">1.</h1><p class="535292">1.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535293">1.</h1><p class="535293">1.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="540545">1.</h1><p class="540545">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>2.Самозванка, 2 реплики</h1><p class="540546">2.</p><p class="540798">2.</p></div></div></div>
+                
+                        <script>
+                    
+            
+            
+            
+            window.onload = function func(){
+            button1=document.getElementById("collapsible1");
+            button2=document.getElementById("collapsible2");
+            button1.onclick = function(){
+            
+            $( ".collapsible" ).collapsible( "expand" );
+            }
+            button2.onclick = function(){
+            
+            $('[data-role="collapsible"]').collapsible( "collapse" );
+            }
+            }
+            
+            
+                  
+                    inarr=[525245, 525246, 529152, 529153, 529155, 529154, 529156, 529157, 525247, 525248, 525249, 529151, 525468, 525469, 529292, 529293, 529294, 535284, 535285, 535286, 535287, 535288, 535289, 535290, 535291, 535292, 535293, 540545, 540546, 540798];
+                    textarr=['Влад Ольгимский: Это что еще? Уф...', 'Самозванка: Я пришла предупредить вас об Оспине... Вам грозит опасность!', 'Влад Ольгимский: Не нужно.', 'Самозванка: Не нужно? Но...', 'Самозванка: Я хотела только добра...', 'Влад Ольгимский: Ступай своей дорогой, сабуровский найденыш... Семья сейчас в пике своего могущества... ты ли будешь предупреждать меня о каких-то опасностях? Да еще со стороны этой нищей полоумной...', 'Самозванка: Что? Найденыш...', 'Самозванка: Не пришлось бы пожалеть...', 'Влад Ольгимский: Я раздавил бы ее взглядом... если бы только счел возможным заметить ее.', 'Самозванка: Как хотите... А только я теперь на вас обижена.', 'Самозванка: Ожирение - часто вызывает порок сердца. Понимаете мой намек?', 'Самозванка: Вы - богач! Вот это да...', 'Влад Ольгимский: Ты ошиблась дверью... Виктория - в соседнем крыле.', 'Самозванка: Я - Клара.', "Влад Ольгимский: Клара? Ты находишься в 'Сгустке', и я - Влад Ольгимский... Что, мое имя тебе ничего не говорит?", 'Самозванка: Вот ничегошеньки.', 'Самозванка: По вашему обращению я догадываюсь, что вы влиятельный человек... и очень несчастный!', 'Влад Ольгимский: Если бы ты не позаботился обо мне - кто бы снова вдохнул жизнь в наш город? Мне столько всего будет нужно сделать через пять или десять лет... Спасибо, спасибо тебе!', 'Самозванка: Ты считаешь, что этот город еще может вернуться к жизни?', 'Влад Ольгимский: Непременно. Конечно, это будет непросто, но ведь бороться за жизнь приходится всегда, иначе это не настоящее. Нельзя же оборвать пуповину, которая питала нас всех от времен сотворения мира. И так это умерло уже почти повсеместно.', 'Самозванка: Стоит ли стараться ради такого убогого местечка?', 'Влад Ольгимский: А что с моими друзьями? Без них у меня ничего не выйдет. Они живы? Их уже можно навестить?', 'Самозванка: Не знаю. Я думал только о тебе.', 'Самозванка: Пока еще нет. Мои труды не закончены.', 'Самозванка: Да. Хорошо, что это осталось хотя бы здесь. Вы еще помните, откуда вы произошли.', 'Самозванка: Не благодари. Мне просто стало вдруг жалко тебя.', 'Самозванка: Живи. Делай, что должно.', 'Влад Ольгимский: Ты мне мешаешь. Я хочу побыть один.', 'Самозванка: Разве я мешаю? Странно...', 'Самозванка: Я вот только отдохну здесь немножечко...'];
+                    
+                    for (i = 0; i < inarr.length; i++) {
+                    
+                    $('.'+inarr[i]).each(function(index, obj)
+                    {
+                      $(this).text($(this).text()+textarr[i]);
+                    });
+                    }
+                    </script>
+                    </body>
+                    </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+                    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+                    
+                    
+                    
+                    </head>
+                    <body>
+                            <div data-role="page" id="pageone">
+                              <div data-role="header">
+                                <h1>Самозванка & Мишка</h1> 
+                                <button id="collapsible1">Развернуть все уникальные</button>
+                                <button id="collapsible2">Свернуть все</button>
+                              </div>
+                          <div data-role="main" class="ui-content">
+                        <div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525510">1.</h1><p class="525510">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525511">1.</h1><p class="525511">1.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529288">1.</h1><p class="529288">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529289">1.</h1><p class="529289">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>4.Самозванка, 2 реплики</h1><p class="529290">4.</p><p class="529291">4.</p></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535284">1.</h1><p class="535284">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535285">1.</h1><p class="535285">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535286">1.</h1><p class="535286">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535287">3.</h1><p class="535287">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535288">3.</h1><p class="535288">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Самозванка, 2 реплики</h1><p class="535289">6.</p><p class="535290">6.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535291">3.</h1><p class="535291">3.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535292">1.</h1><p class="535292">1.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535293">1.</h1><p class="535293">1.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="540539">1.</h1><p class="540539">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>2.Самозванка, 2 реплики</h1><p class="540540">2.</p><p class="540799">2.</p></div></div></div>
+                
+                        <script>
+                    
+            
+            
+            
+            window.onload = function func(){
+            button1=document.getElementById("collapsible1");
+            button2=document.getElementById("collapsible2");
+            button1.onclick = function(){
+            
+            $( ".collapsible" ).collapsible( "expand" );
+            }
+            button2.onclick = function(){
+            
+            $('[data-role="collapsible"]').collapsible( "collapse" );
+            }
+            }
+            
+            
+                  
+                    inarr=[525510, 525511, 529288, 529289, 529290, 529291, 535284, 535285, 535286, 535287, 535288, 535289, 535290, 535291, 535292, 535293, 540539, 540540, 540799];
+                    textarr=['Мишка: Я же тебе сказала - я с тобой больше не играю! Ты нечестно водишь. Используешь волшебство.', 'Самозванка: Я тебя вижу впервые.', 'Самозванка: А я тебе что сказала?', 'Мишка: А ты сказала, что ни за что не вернешься, потому что я тебе понравилась. Разве я тебе больше не нравлюсь?', 'Самозванка: Нравишься.', 'Самозванка: Тебе все это померещилось.', 'Мишка: Если бы ты не позаботился обо мне - кто бы снова вдохнул жизнь в наш город? Мне столько всего будет нужно сделать через пять или десять лет... Спасибо, спасибо тебе!', 'Самозванка: Ты считаешь, что этот город еще может вернуться к жизни?', 'Мишка: Непременно. Конечно, это будет непросто, но ведь бороться за жизнь приходится всегда, иначе это не настоящее. Нельзя же оборвать пуповину, которая питала нас всех от времен сотворения мира. И так это умерло уже почти повсеместно.', 'Самозванка: Стоит ли стараться ради такого убогого местечка?', 'Мишка: А что с моими друзьями? Без них у меня ничего не выйдет. Они живы? Их уже можно навестить?', 'Самозванка: Не знаю. Я думал только о тебе.', 'Самозванка: Пока еще нет. Мои труды не закончены.', 'Самозванка: Да. Хорошо, что это осталось хотя бы здесь. Вы еще помните, откуда вы произошли.', 'Самозванка: Не благодари. Мне просто стало вдруг жалко тебя.', 'Самозванка: Живи. Делай, что должно.', 'Мишка: Опять ты? Мы же только что обо всем поговорили...', 'Самозванка: Я не помню! Когда это? Разве только что...', 'Самозванка: Да, я только вернулась... и где бы теперь в зеркало посмотреться?'];
+                    
+                    for (i = 0; i < inarr.length; i++) {
+                    
+                    $('.'+inarr[i]).each(function(index, obj)
+                    {
+                      $(this).text($(this).text()+textarr[i]);
+                    });
+                    }
+                    </script>
+                    </body>
+                    </html>
