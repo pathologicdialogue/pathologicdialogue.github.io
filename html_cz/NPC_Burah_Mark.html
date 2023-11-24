@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+                    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+                    
+                    
+                    
+                    </head>
+                    <body>
+                            <div data-role="page" id="pageone">
+                              <div data-role="header">
+                                <h1>Haruspicus & Mark Nesmrtelný</h1> 
+                                <button id="collapsible1">Rozbalte všechny jedinečné</button>
+                                <button id="collapsible2">Sbalit vše</button>
+                              </div>
+                          <div data-role="main" class="ui-content">
+                        <div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="520759">1.</h1><p class="520759">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="520760">2.</h1><p class="520760">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="520761">3.</h1><p class="520761">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="520762">4.</h1><p class="520762">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="520763">5.</h1><p class="520763">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Haruspicus, 2 odpovědi</h1><p class="520764">6.</p><p class="520765">6.</p></div></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="520766">2.</h1><p class="520766">2.</p><div data-role="collapsible" data-collapsed="true"><h1 class="520763">3.</h1><p class="520763">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>4.Haruspicus, 2 odpovědi</h1><p class="520764">4.</p><p class="520765">4.</p></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535231">1.</h1><p class="535231">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535232">2.</h1><p class="535232">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535277">3.</h1><p class="535277">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>4.Haruspicus, 2 odpovědi</h1><p class="535278">4.</p><p class="535279">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535281">5.</h1><p class="535281">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Haruspicus, 2 odpovědi</h1><p class="535282">6.</p><p class="535283">6.</p></div></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535233">2.</h1><p class="535233">2.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535280">2.</h1><p class="535280">2.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="540554">1.</h1><p class="540554">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>2.Haruspicus, 2 odpovědi</h1><p class="540555">2.</p><p class="540794">2.</p></div></div></div>
+                
+                        <script>
+                    
+            
+            
+            
+            window.onload = function func(){
+            button1=document.getElementById("collapsible1");
+            button2=document.getElementById("collapsible2");
+            button1.onclick = function(){
+            
+            $( ".collapsible" ).collapsible( "expand" );
+            }
+            button2.onclick = function(){
+            
+            $('[data-role="collapsible"]').collapsible( "collapse" );
+            }
+            }
+            
+            
+                  
+                    inarr=[520759, 520760, 520761, 520762, 520763, 520764, 520765, 520766, 535231, 535232, 535277, 535278, 535279, 535281, 535282, 535283, 535233, 535280, 540554, 540555, 540794];
+                    textarr=['Mark Nesmrtelný: Je mi ctí se představit - Mark Nesmrtelný, impresário Divadla a loutkoherec. Přeješ si vidět nějakou pantomimu, ctihodný?', 'Haruspicus: Ano. Přeji.', 'Mark Nesmrtelný: Počkej na znamení! Začne brzy.', 'Haruspicus: Jak mě chceš překvapit?', 'Mark Nesmrtelný: I ty budeš hrát jednu z rolí. Budeš mít také roli. Jednu z těch hlavních, ctihodný.', 'Haruspicus: Raději bych se jenom díval.', 'Haruspicus: Najdi si za mě náhradu.', 'Haruspicus: Ne.', 'Mark Nesmrtelný: Nebýt tebe, neměl bych budoucnost. Účel, jemuž sloužím, by beze mě patrně nemohl uspět. Děkuji ti.', 'Haruspicus: Jaká na tebe tedy čeká budoucnost?', 'Mark Nesmrtelný: Město bude vybudováno znova. Přeneseme jej na druhou stranu řeky. Země je tam čistá. Nikdo nás tam nebude rušit. Polyhedron bude základem nové osady, stejně jako jím byla pro zničenou osadu kdysi Jatka. A začne nová éra.', 'Haruspicus: Obávám se, že takový čas nikdy nenastane.', 'Haruspicus: Doufám, že uspěješ.', 'Mark Nesmrtelný: Teď je nás příliš málo. Sám uspět samozřejmě nemohu… Každý člověk se počítá. Víš, kolik z nás přežilo?', 'Haruspicus: To nevím. Alespoň ty nezemřeš… A zbytek mě nezajímá.', 'Haruspicus: Má mise zde není ještě u konce. Bude vás dost.', 'Haruspicus: Jsi nula. Ale ještě to nevíš.', 'Haruspicus: Žij. Dělej, co bys měl.', 'Mark Nesmrtelný: Klid, klid… Teď potřebuji jen klid.', 'Haruspicus: Přišel jsem, abych se dozvěděl, jestli jsou všichni živí a zdraví, nebo ne.', 'Haruspicus: No… Chtěl jsem si odpočinout.'];
+                    
+                    for (i = 0; i < inarr.length; i++) {
+                    
+                    $('.'+inarr[i]).each(function(index, obj)
+                    {
+                      $(this).text($(this).text()+textarr[i]);
+                    });
+                    }
+                    </script>
+                    </body>
+                    </html>

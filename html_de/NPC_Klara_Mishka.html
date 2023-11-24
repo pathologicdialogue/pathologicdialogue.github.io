@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+                    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+                    
+                    
+                    
+                    </head>
+                    <body>
+                            <div data-role="page" id="pageone">
+                              <div data-role="header">
+                                <h1>Heilerin & Mischka</h1> 
+                                <button id="collapsible1">Erweitern Sie alles einzigartig</button>
+                                <button id="collapsible2">Alles einklappen</button>
+                              </div>
+                          <div data-role="main" class="ui-content">
+                        <div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525510">1.</h1><p class="525510">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525511">2.</h1><p class="525511">2.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529288">2.</h1><p class="529288">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529289">3.</h1><p class="529289">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>4.Heilerin, 2 Antworten</h1><p class="529290">4.</p><p class="529291">4.</p></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535284">1.</h1><p class="535284">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535285">2.</h1><p class="535285">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535286">3.</h1><p class="535286">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535287">4.</h1><p class="535287">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535288">5.</h1><p class="535288">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Heilerin, 2 Antworten</h1><p class="535289">6.</p><p class="535290">6.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535291">4.</h1><p class="535291">4.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535292">2.</h1><p class="535292">2.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535293">2.</h1><p class="535293">2.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="540539">1.</h1><p class="540539">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>2.Heilerin, 2 Antworten</h1><p class="540540">2.</p><p class="540799">2.</p></div></div></div>
+                
+                        <script>
+                    
+            
+            
+            
+            window.onload = function func(){
+            button1=document.getElementById("collapsible1");
+            button2=document.getElementById("collapsible2");
+            button1.onclick = function(){
+            
+            $( ".collapsible" ).collapsible( "expand" );
+            }
+            button2.onclick = function(){
+            
+            $('[data-role="collapsible"]').collapsible( "collapse" );
+            }
+            }
+            
+            
+                  
+                    inarr=[525510, 525511, 529288, 529289, 529290, 529291, 535284, 535285, 535286, 535287, 535288, 535289, 535290, 535291, 535292, 535293, 540539, 540540, 540799];
+                    textarr=['Mischka: Ich habe es Ihnen schon gesagt - ich spiele nicht mehr mit Ihnen! Sie sind unfair - Sie benutzen Zauberei.', 'Heilerin: Ich habe dich doch noch nie gesehen.', 'Heilerin: Und was habe ich dir geantwortet?', 'Mischka: Sie haben gesagt, dass Sie um keinen Preis wieder zurückkommen würden, weil Sie mich mögen. Mögen Sie mich denn nicht mehr?', 'Heilerin: Doch, das tue ich.', 'Heilerin: Das hast du dir alles eingebildet.', 'Mischka: Wenn Sie sich nicht um mich gekümmert hätten, wer würde dann jemals wieder neues Leben in unsere Stadt bringen? In fünf bis zehn Jahren werde ich so viele Dinge tun können. Vielen, vielen Dank!', 'Heilerin: Glauben Sie, dass diese Stadt wieder zum Leben erweckt werden kann?', 'Mischka: Auf jeden Fall. Natürlich wir das nicht leicht. Aber man muss immer ums Leben kämpfen, ansonsten ist es nicht real. Sie können nicht die Nabelschnur durchschneiden, die uns alle seit der Erschaffung der Welt genährt hat. Sie ist bereits fast überall abgestorben.', 'Heilerin: Ist dieser klägliche Ort all Ihre Bemühungen wirklich wert?', 'Mischka: Und was ist mit meinen Freunden? Ohne sie kann ich gar nichts tun. Sind sie am Leben? Kann ich sie schon besuchen?', 'Heilerin: Das weiß ich nicht. Ich wollte mich nur um Sie kümmern.', 'Heilerin: Noch nicht. Meine Arbeit ist noch nicht abgeschlossen.', 'Heilerin: Ja. Aber wenigstens ist sie hier noch am Leben. Sie erinnern sich also noch an Ihre Ursprünge ...', 'Heilerin: Danken Sie mir nicht. Ich hatte bloß plötzlich Mitleid mit Ihnen.', 'Heilerin: Leben Sie! Und tun Sie, was Sie tun müssen.', 'Mischka: Haben Sie etwas vergessen? Wir haben gerade über alles gesprochen ...', 'Heilerin: Ich erinnere mich nicht! Wann war das? Es ist eine Weile her ...', 'Heilerin: Ja, ich bin gerade zurückgekommen ... Und wo kann ich in den Spiegel sehen?'];
+                    
+                    for (i = 0; i < inarr.length; i++) {
+                    
+                    $('.'+inarr[i]).each(function(index, obj)
+                    {
+                      $(this).text($(this).text()+textarr[i]);
+                    });
+                    }
+                    </script>
+                    </body>
+                    </html>

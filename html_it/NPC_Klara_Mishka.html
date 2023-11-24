@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+                    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+                    
+                    
+                    
+                    </head>
+                    <body>
+                            <div data-role="page" id="pageone">
+                              <div data-role="header">
+                                <h1>Devota & Mishka</h1> 
+                                <button id="collapsible1">Espandi tutto unico</button>
+                                <button id="collapsible2">Comprimi tutto</button>
+                              </div>
+                          <div data-role="main" class="ui-content">
+                        <div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525510">1.</h1><p class="525510">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525511">2.</h1><p class="525511">2.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529288">2.</h1><p class="529288">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529289">3.</h1><p class="529289">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>4.Devota, 2 risposte</h1><p class="529290">4.</p><p class="529291">4.</p></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535284">1.</h1><p class="535284">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535285">2.</h1><p class="535285">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535286">3.</h1><p class="535286">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535287">4.</h1><p class="535287">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535288">5.</h1><p class="535288">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Devota, 2 risposte</h1><p class="535289">6.</p><p class="535290">6.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535291">4.</h1><p class="535291">4.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535292">2.</h1><p class="535292">2.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535293">2.</h1><p class="535293">2.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="540539">1.</h1><p class="540539">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>2.Devota, 2 risposte</h1><p class="540540">2.</p><p class="540799">2.</p></div></div></div>
+                
+                        <script>
+                    
+            
+            
+            
+            window.onload = function func(){
+            button1=document.getElementById("collapsible1");
+            button2=document.getElementById("collapsible2");
+            button1.onclick = function(){
+            
+            $( ".collapsible" ).collapsible( "expand" );
+            }
+            button2.onclick = function(){
+            
+            $('[data-role="collapsible"]').collapsible( "collapse" );
+            }
+            }
+            
+            
+                  
+                    inarr=[525510, 525511, 529288, 529289, 529290, 529291, 535284, 535285, 535286, 535287, 535288, 535289, 535290, 535291, 535292, 535293, 540539, 540540, 540799];
+                    textarr=["Mishka: Te l'ho già detto: non gioco più con te! Sei disonesta. Usi la magia.", "Devota: E' la prima volta che ti vedo.", 'Devota: E che cosa ti ho detto?', 'Mishka: Hai detto che non saresti più tornata, perché ti piaccio. Non ti piaccio più?', 'Devota: Sì.', 'Devota: Ti stai confondendo...', 'Mishka: Se non fosse per le tue cure nei miei riguardi chi mai riporterà la vita alla nostra città? Dovrò fare così tante cose nei prossimi cinque o dieci anni... Grazie, grazie!', 'Devota: Pensi che questa città sia ancora in grado di riprendersi?', 'Mishka: Sicuramente. Certo non sarà facile. Ma nella vita bisogna combattere, altrimenti non è vera vita. Non puoi strappare il cordone ombelicale che ci ha nutriti fin dai tempi della creazione del mondo. Ha già incontrato la morte quasi ovunque.', 'Devota: Ma vale davvero la pena impegnarsi così tanto per un luogo così miserabile?', "Mishka: E i miei amici? Non potrò fare nulla senza di loro. Sono ancora vivi? E' possibile far loro visita?", 'Devota: Non lo so. Volevo occuparmi solo di te.', 'Devota: Non ancora. Il mio lavoro non è ancora terminato.', 'Devota: Si. Almeno qui è tuttora in vita. Ti fa ricordare ancora quale è la tua origine.', 'Devota: Non ringraziarmi. Ho solo provato improvvisamente pietà per te.', 'Devota: Vivi. Fai quello che devi fare.', 'Mishka: Non hai dimenticato niente? Abbiamo parlato di una cosa...', 'Devota: Non ricordo! Quando? Poco fa...', "Devota: Sì, sono appena tornata... c'è uno specchio?"];
+                    
+                    for (i = 0; i < inarr.length; i++) {
+                    
+                    $('.'+inarr[i]).each(function(index, obj)
+                    {
+                      $(this).text($(this).text()+textarr[i]);
+                    });
+                    }
+                    </script>
+                    </body>
+                    </html>

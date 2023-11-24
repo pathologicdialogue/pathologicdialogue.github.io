@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+                    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+                    
+                    
+                    
+                    </head>
+                    <body>
+                            <div data-role="page" id="pageone">
+                              <div data-role="header">
+                                <h1>Poświęcona & Miszka</h1> 
+                                <button id="collapsible1">Rozwiń wszystkie unikalne</button>
+                                <button id="collapsible2">Zwinąć wszystkie</button>
+                              </div>
+                          <div data-role="main" class="ui-content">
+                        <div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525510">1.</h1><p class="525510">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525511">2.</h1><p class="525511">2.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529288">2.</h1><p class="529288">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529289">3.</h1><p class="529289">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>4.Poświęcona, 2 odpowiedzi</h1><p class="529290">4.</p><p class="529291">4.</p></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535284">1.</h1><p class="535284">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535285">2.</h1><p class="535285">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535286">3.</h1><p class="535286">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535287">4.</h1><p class="535287">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535288">5.</h1><p class="535288">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Poświęcona, 2 odpowiedzi</h1><p class="535289">6.</p><p class="535290">6.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535291">4.</h1><p class="535291">4.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535292">2.</h1><p class="535292">2.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535293">2.</h1><p class="535293">2.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="540539">1.</h1><p class="540539">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>2.Poświęcona, 2 odpowiedzi</h1><p class="540540">2.</p><p class="540799">2.</p></div></div></div>
+                
+                        <script>
+                    
+            
+            
+            
+            window.onload = function func(){
+            button1=document.getElementById("collapsible1");
+            button2=document.getElementById("collapsible2");
+            button1.onclick = function(){
+            
+            $( ".collapsible" ).collapsible( "expand" );
+            }
+            button2.onclick = function(){
+            
+            $('[data-role="collapsible"]').collapsible( "collapse" );
+            }
+            }
+            
+            
+                  
+                    inarr=[525510, 525511, 529288, 529289, 529290, 529291, 535284, 535285, 535286, 535287, 535288, 535289, 535290, 535291, 535292, 535293, 540539, 540540, 540799];
+                    textarr=['Miszka: Już ci mówiłam, że więcej nie będę się z tobą bawić! Grasz nieuczciwie. Używasz czarów.', 'Poświęcona: Widzę cię pierwszy raz w życiu.', 'Poświęcona: A co ci powiedziałam?', 'Miszka: Powiedziałaś, że już więcej nie wrócisz, bo mnie lubisz. Przestałaś mnie lubić?', 'Poświęcona: Nie. Wciąż cię lubię.', 'Poświęcona: Wszystko ci się przywidziało.', 'Miszka: Gdyby nie twoja troska o mnie, kto znów tchnąłby życie do naszego miasta? Tyle będzie trzeba zrobić przez najbliższe pięć, dziesięć lat... Dziękuję, dziękuję ci!', 'Poświęcona: Uważasz, że miasto można jeszcze przywrócić do życia?', 'Miszka: Na pewno. Nie będzie to łatwe, ale przecież zawsze trzeba walczyć o życie. Inaczej ono nie jest prawdziwe. Nie można odcinać pępowiny, która odżywiała nas od stworzenia świata. I tak prawie wszędzie jest już martwa.', 'Poświęcona: Warto starać się dla tak nędznego miasteczka?', 'Miszka: A co z moimi przyjaciółmi? Bez nich nie dam rady nic zrobić. Oni wciąż żyją? Można ich już odwiedzić?', 'Poświęcona: Nie wiem. Chciałem zaopiekować się tylko tobą.', 'Poświęcona: Jeszcze nie. Moja praca wciąż nie dobiegła końca.', 'Poświęcona: Tak. Dobrze, że została jeszcze tutaj. Wciąż pamiętacie, skąd pochodzicie.', 'Poświęcona: Nie dziękuj. Po prostu nagle zrobiło mi się ciebie żal.', 'Poświęcona: Żyj. Rób, co do ciebie należy.', 'Miszka: Zapomniałaś czegoś? Przecież dopiero co rozmawiałyśmy...', 'Poświęcona: Nie pamiętam! Kiedy to było? Przed chwilą...', 'Poświęcona: Tak, wróciłam... Gdzie jest jakieś lustro?'];
+                    
+                    for (i = 0; i < inarr.length; i++) {
+                    
+                    $('.'+inarr[i]).each(function(index, obj)
+                    {
+                      $(this).text($(this).text()+textarr[i]);
+                    });
+                    }
+                    </script>
+                    </body>
+                    </html>

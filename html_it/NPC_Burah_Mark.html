@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+                    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+                    
+                    
+                    
+                    </head>
+                    <body>
+                            <div data-role="page" id="pageone">
+                              <div data-role="header">
+                                <h1>Indovino & Mark Immortal</h1> 
+                                <button id="collapsible1">Espandi tutto unico</button>
+                                <button id="collapsible2">Comprimi tutto</button>
+                              </div>
+                          <div data-role="main" class="ui-content">
+                        <div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="520759">1.</h1><p class="520759">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="520760">2.</h1><p class="520760">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="520761">3.</h1><p class="520761">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="520762">4.</h1><p class="520762">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="520763">5.</h1><p class="520763">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Indovino, 2 risposte</h1><p class="520764">6.</p><p class="520765">6.</p></div></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="520766">2.</h1><p class="520766">2.</p><div data-role="collapsible" data-collapsed="true"><h1 class="520763">3.</h1><p class="520763">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>4.Indovino, 2 risposte</h1><p class="520764">4.</p><p class="520765">4.</p></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535231">1.</h1><p class="535231">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535232">2.</h1><p class="535232">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535277">3.</h1><p class="535277">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>4.Indovino, 2 risposte</h1><p class="535278">4.</p><p class="535279">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535281">5.</h1><p class="535281">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Indovino, 2 risposte</h1><p class="535282">6.</p><p class="535283">6.</p></div></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535233">2.</h1><p class="535233">2.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535280">2.</h1><p class="535280">2.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="540554">1.</h1><p class="540554">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>2.Indovino, 2 risposte</h1><p class="540555">2.</p><p class="540794">2.</p></div></div></div>
+                
+                        <script>
+                    
+            
+            
+            
+            window.onload = function func(){
+            button1=document.getElementById("collapsible1");
+            button2=document.getElementById("collapsible2");
+            button1.onclick = function(){
+            
+            $( ".collapsible" ).collapsible( "expand" );
+            }
+            button2.onclick = function(){
+            
+            $('[data-role="collapsible"]').collapsible( "collapse" );
+            }
+            }
+            
+            
+                  
+                    inarr=[520759, 520760, 520761, 520762, 520763, 520764, 520765, 520766, 535231, 535232, 535277, 535278, 535279, 535281, 535282, 535283, 535233, 535280, 540554, 540555, 540794];
+                    textarr=["Mark Immortal: Sono felice di presentarmi: Mark Immortal, impresario del Teatro e maestro delle marionette. Desidera l'onorevole ospite vedere la pantomima?", 'Indovino: Si, grazie.', "Mark Immortal: Attendi l'annuncio! Inizierà presto.", 'Indovino: Come pensi di sorprendermi?', 'Mark Immortal: Anche tu avrai un ruolo. Uno dei principali, onorevole ospite.', 'Indovino: Preferirei guardare.', 'Indovino: Trova un sostituto.', 'Indovino: No, grazie.', 'Mark Immortal: Se non fosse stato per te io non avrei alcun futuro. La causa che servo non può probabilmente sperare nel successo senza di me. Grazie.', 'Indovino: Che tipo di futuro ti aspetta?', "Mark Immortal: La città verra ricostruita. La sposteremo sull'altro lato del fiume. La terra è buona laggiù. Nessuno verrà a disturbarci. Il Poliedro sarà la base del nuovo insediamento così come i macelli erano la base di quello ormai condannato. E giungerà una nuova era.", 'Indovino: Temo che quel momento non arriverà mai.', 'Indovino: Spero che ci riuscirai.', 'Mark Immortal: Siamo troppo pochi adesso. Non riuscirò ad avere successo da solo ovviamente... Ogni persona è importante. Sai quanti di noi sono sopravvissuti?', 'Indovino: Non lo so. Almeno tu non sei morto... E degli altri non mi importa.', 'Indovino: La mia missione qui non è ancora finita. Basta così.', 'Indovino: Tu non sei nulla, ma non ne sei ancora consapevole.', 'Indovino: Vivi. Fai quello che devi fare.', 'Mark Immortal: Pace... Pace... ho bisogno solo di pace adesso.', 'Indovino: Sono venuto per sapere se sono tutti vivi e vegeti o no.', 'Indovino: Va bene... volevo riposarmi un poco.'];
+                    
+                    for (i = 0; i < inarr.length; i++) {
+                    
+                    $('.'+inarr[i]).each(function(index, obj)
+                    {
+                      $(this).text($(this).text()+textarr[i]);
+                    });
+                    }
+                    </script>
+                    </body>
+                    </html>

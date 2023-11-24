@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+                    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+                    
+                    
+                    
+                    </head>
+                    <body>
+                            <div data-role="page" id="pageone">
+                              <div data-role="header">
+                                <h1>Poświęcona & Spiczka</h1> 
+                                <button id="collapsible1">Rozwiń wszystkie unikalne</button>
+                                <button id="collapsible2">Zwinąć wszystkie</button>
+                              </div>
+                          <div data-role="main" class="ui-content">
+                        <div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525525">1.</h1><p class="525525">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525526">2.</h1><p class="525526">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529273">3.</h1><p class="529273">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529272">4.</h1><p class="529272">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529275">5.</h1><p class="529275">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529277">6.</h1><p class="529277">6.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529274">4.</h1><p class="529274">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529276">5.</h1><p class="529276">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529278">6.</h1><p class="529278">6.</p></div></div></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526413">1.</h1><p class="526413">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526414">2.</h1><p class="526414">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528978">3.</h1><p class="528978">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528980">4.</h1><p class="528980">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528981">5.</h1><p class="528981">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528979">6.</h1><p class="528979">6.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526415">7.</h1><p class="526415">7.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526416">8.</h1><p class="526416">8.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526417">9.</h1><p class="526417">9.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526418">10.</h1><p class="526418">10.</p></div></div></div></div></div></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526419">2.</h1><p class="526419">2.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528977">2.</h1><p class="528977">2.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535284">1.</h1><p class="535284">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535285">2.</h1><p class="535285">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535286">3.</h1><p class="535286">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535287">4.</h1><p class="535287">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535288">5.</h1><p class="535288">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Poświęcona, 2 odpowiedzi</h1><p class="535289">6.</p><p class="535290">6.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535291">4.</h1><p class="535291">4.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535292">2.</h1><p class="535292">2.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535293">2.</h1><p class="535293">2.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="540545">1.</h1><p class="540545">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>2.Poświęcona, 2 odpowiedzi</h1><p class="540546">2.</p><p class="540798">2.</p></div></div></div>
+                
+                        <script>
+                    
+            
+            
+            
+            window.onload = function func(){
+            button1=document.getElementById("collapsible1");
+            button2=document.getElementById("collapsible2");
+            button1.onclick = function(){
+            
+            $( ".collapsible" ).collapsible( "expand" );
+            }
+            button2.onclick = function(){
+            
+            $('[data-role="collapsible"]').collapsible( "collapse" );
+            }
+            }
+            
+            
+                  
+                    inarr=[525525, 525526, 529273, 529272, 529275, 529277, 529274, 529276, 529278, 526413, 526414, 528978, 528980, 528981, 528979, 526415, 526416, 526417, 526418, 526419, 528977, 535284, 535285, 535286, 535287, 535288, 535289, 535290, 535291, 535292, 535293, 540545, 540546, 540798];
+                    textarr=['Spiczka: Cześć Klaro! Zauważyłaś, widziałaś, jak cię wczoraj obserwowałem? Jestem Spiczka.', 'Poświęcona: Obserwowałeś mnie?', 'Spiczka: Wybacz. Często tak robię. Jestem ciekawski! Lubię mieszać się do wszystkiego, do czego nie powinienem się nawet zbliżać. Chyba właśnie dlatego nazywają mnie złodziejem. A ciebie dlaczego nazywają złodziejką?', 'Poświęcona: Tak, nazywają mnie tak. Ale sama nie wiem dlaczego. Niczego nie ukradłam.', 'Spiczka: Może będziesz musiała? Uważaj na siebie, bądź ostrożna.', 'Poświęcona: Więc naznaczają mnie, zanim jeszcze dokonam przestępstwa? Jesteś śmieszny...', 'Poświęcona: Tak mnie nazywają? Nie pamiętam, żebym coś kiedykolwiek ukradła.', 'Spiczka: Często się tak dzieje. Coś ukradniesz i nie pamiętasz. Może to coś ważnego? Albo coś, co nie ciąży w kieszeni. Na przykład cudze imię?', 'Poświęcona: Moje imię jest z tych, które można brać bezkarnie.', 'Spiczka: Wiesz, od początku nie wierzyłem, że jesteś chorobą...', 'Poświęcona: Spiczka, hej, Spiczka? Przechytrzymy Matkę Przeoryszę?', 'Spiczka: Taję Tyczik? Po co? Pokaż jej paluszek, a ona sama się przechytrzy. Nie... Przypomnijmy jej lepiej, że to Chan jest gospodarzem domu!', 'Poświęcona: Czekaj! Ona lubi bajki? No, Taja...', 'Spiczka: Lubi. Tylko ona wszystkie zna. Wychowywały ją odongi. Wiesz, jacy z nich narratorzy? Wszystko jej już opowiedzieli!', 'Poświęcona: Matka powiedziała, że przyprowadziłeś jej wyjątkowego narratora.', 'Spiczka: Ach! O to chodzi. Nikogo nie przyprowadziłem, gdzie tam... Nawet go nie wyśledziłem. To był mój Albinos. Ktoś widział, jak szeptał jej bajki do ucha, a ona cieszyła się i mówiła, że jedna była o mnie, cenna bajka. Hojnie go obdarowała. Czekała na ciąg dalszy, ale tej nocy ich zamknęli.', 'Poświęcona: Ach, co to była za bajka?', 'Spiczka: Po co ci to? Chcesz prezent? Ona teraz nie daje prezentów... Najlepiej stwórz własną bajkę. Nie powinnaś mieć z tym problemów. Jeśli jesteś tworem Stepu, Step sam podpowie ci słowa.', 'Poświęcona: Jesteś taki sam...', 'Poświęcona: Spójrz na mnie, przyjrzyj się uważnie...', 'Poświęcona: Zuch chłopak. Jesteś odważny.', 'Spiczka: Gdyby nie twoja troska o mnie, kto znów tchnąłby życie do naszego miasta? Tyle będzie trzeba zrobić przez najbliższe pięć, dziesięć lat... Dziękuję, dziękuję ci!', 'Poświęcona: Uważasz, że miasto można jeszcze przywrócić do życia?', 'Spiczka: Na pewno. Nie będzie to łatwe, ale przecież zawsze trzeba walczyć o życie. Inaczej ono nie jest prawdziwe. Nie można odcinać pępowiny, która odżywiała nas od stworzenia świata. I tak prawie wszędzie jest już martwa.', 'Poświęcona: Warto starać się dla tak nędznego miasteczka?', 'Spiczka: A co z moimi przyjaciółmi? Bez nich nie dam rady nic zrobić. Oni wciąż żyją? Można ich już odwiedzić?', 'Poświęcona: Nie wiem. Chciałem zaopiekować się tylko tobą.', 'Poświęcona: Jeszcze nie. Moja praca wciąż nie dobiegła końca.', 'Poświęcona: Tak. Dobrze, że została jeszcze tutaj. Wciąż pamiętacie, skąd pochodzicie.', 'Poświęcona: Nie dziękuj. Po prostu nagle zrobiło mi się ciebie żal.', 'Poświęcona: Żyj. Rób, co do ciebie należy.', 'Spiczka: Przeszkadzasz mi. Chcę zostać sam.', 'Poświęcona: Ja przeszkadzam? Dziwne...', 'Poświęcona: Tylko chwilę odpocznę...'];
+                    
+                    for (i = 0; i < inarr.length; i++) {
+                    
+                    $('.'+inarr[i]).each(function(index, obj)
+                    {
+                      $(this).text($(this).text()+textarr[i]);
+                    });
+                    }
+                    </script>
+                    </body>
+                    </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+                    <html>
+                    <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+                    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+                    
+                    
+                    
+                    </head>
+                    <body>
+                            <div data-role="page" id="pageone">
+                              <div data-role="header">
+                                <h1>Klára & Spiška</h1> 
+                                <button id="collapsible1">Rozbalte všechny jedinečné</button>
+                                <button id="collapsible2">Sbalit vše</button>
+                              </div>
+                          <div data-role="main" class="ui-content">
+                        <div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525525">1.</h1><p class="525525">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="525526">2.</h1><p class="525526">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529273">3.</h1><p class="529273">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529272">4.</h1><p class="529272">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529275">5.</h1><p class="529275">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529277">6.</h1><p class="529277">6.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529274">4.</h1><p class="529274">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529276">5.</h1><p class="529276">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="529278">6.</h1><p class="529278">6.</p></div></div></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526413">1.</h1><p class="526413">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526414">2.</h1><p class="526414">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528978">3.</h1><p class="528978">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528980">4.</h1><p class="528980">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528981">5.</h1><p class="528981">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528979">6.</h1><p class="528979">6.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526415">7.</h1><p class="526415">7.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526416">8.</h1><p class="526416">8.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526417">9.</h1><p class="526417">9.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526418">10.</h1><p class="526418">10.</p></div></div></div></div></div></div></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="526419">2.</h1><p class="526419">2.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="528977">2.</h1><p class="528977">2.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535284">1.</h1><p class="535284">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535285">2.</h1><p class="535285">2.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535286">3.</h1><p class="535286">3.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535287">4.</h1><p class="535287">4.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535288">5.</h1><p class="535288">5.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>6.Klára, 2 odpovědi</h1><p class="535289">6.</p><p class="535290">6.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535291">4.</h1><p class="535291">4.</p></div></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535292">2.</h1><p class="535292">2.</p></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="535293">2.</h1><p class="535293">2.</p></div></div><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1 class="540545">1.</h1><p class="540545">1.</p><div data-role="collapsible" class="collapsible" data-collapsed="true"><h1>2.Klára, 2 odpovědi</h1><p class="540546">2.</p><p class="540798">2.</p></div></div></div>
+                
+                        <script>
+                    
+            
+            
+            
+            window.onload = function func(){
+            button1=document.getElementById("collapsible1");
+            button2=document.getElementById("collapsible2");
+            button1.onclick = function(){
+            
+            $( ".collapsible" ).collapsible( "expand" );
+            }
+            button2.onclick = function(){
+            
+            $('[data-role="collapsible"]').collapsible( "collapse" );
+            }
+            }
+            
+            
+                  
+                    inarr=[525525, 525526, 529273, 529272, 529275, 529277, 529274, 529276, 529278, 526413, 526414, 528978, 528980, 528981, 528979, 526415, 526416, 526417, 526418, 526419, 528977, 535284, 535285, 535286, 535287, 535288, 535289, 535290, 535291, 535292, 535293, 540545, 540546, 540798];
+                    textarr=['Spiška: Nazdárek, Kláro! Všimla sis, že tě pozoruji? Jsem Spiška.', 'Klára: Pozoroval jsi mě?', 'Spiška: Omlouvám se. To je moje specialita. Rád se pletu do věcí, do kterých nikomu nic není. Proto mě asi nazývají zlodějem. Proč říkají o tobě, že jsi zlodějka?', 'Klára: Sice o mně tvrdí, že jsem zlodějka, ale nevím proč. Nic jsem neukradla.', 'Spiška: Možná, že budeš muset. Dávej si pozor a buď opatrná.', 'Klára: Stíhají mě za nespáchaný zločin. A ty jsi legrační chlápek.', 'Klára: Opravdu? Nevzpomínám si, že bych něco ukradla.', 'Spiška: To se stává často. Něco jsi čmajzla a zapomnělas´ na to. Může to být něco důležitého, nebo něco, čím si kapsy nenaplníš. Asi cizí jméno?', 'Klára: Mé jméno pochází od těch, které si nelze půjčit bez trestu.', 'Spiška: Jak víš, od samého začátku jsem nevěřil, že jsi choroba.', 'Klára: Spiško, hej Spiško, jak přechytračíme Abatyši?', 'Spiška: Taju Tyčikovou? Nemá cenu se ji snažit přelstít. Nabídni jí prst a přelstí se sama. Raději připomeňme Khanovi, kdo je pánem domu!', 'Klára: Zadrž! Taja ulítává na pohádkách, ne?', 'Spiška: Přesně. Zná je všechny. Vychovali ji odongové. Jsou to skvělí vypravěči. Vyprávěli jí, na co si vzpomeneš!', 'Klára: Abatyše říkala, že jsi jí přivedl výjimečného vypravěče.', 'Spiška: Jo, tohle. Nikoho jsem nepřivedl... dokonce jsem ho ani nedokázal vystopovat. Bylo to mé Bledé zjevení. Viděl jsem ho, jak jí šeptal cosi do ucha, byla šťastná jak blecha a řekla, že to bylo údajně celé o mně. Cenný příběh. Štědře ho obdarovala. Čekala na pokračování – táhli to celou noc.', 'Klára: Ach, co to bylo za příběh?', 'Spiška: Na co to potřebuješ vědět? Chceš ji obdarovat? Není na dárky… Raději by sis měla vymyslet vlastní historku. Máš na to. Pokud jsi výtvorem stepi, tak ti step napoví.', 'Klára: Jsi stejný…', 'Klára: Dobrá, podívej se na mě, podívej se lépe…', 'Klára: Výborně. Jsi statečný.', 'Spiška: Kdyby ses o mě nepostaral, kdo by zase vdechl život našemu městu? Budu v příštích pěti nebo deseti letech muset udělat tolik věcí… Děkuji ti, děkuji ti!', 'Klára: Ty si myslíš, že se tohle město dá ještě vybudovat, znovu obnovit zdejší život?', 'Spiška: Určitě. Samozřejmě, že to nebude snadné. Ale každý člověk musí bojovat o své místo na světě, jinak to nejde. Nemůžeš přestřihnout pupeční šňůru, která nás všechny živila od stvoření světa. Skoro všude je již jen smrt.', 'Klára: Opravdu stojí za to se co nejvíce snažit zkrášlit i tak bezútěšné místo.', 'Spiška: A co mí přátelé? Bez nich nejsem schopen udělat vůbec nic. Jsou naživu? Mohu je navštívit?', 'Klára: To nevím. Chtěl jsem se starat jen o tebe.', 'Klára: Ještě ne. Má práce není u konce.', 'Klára: Ano. Alespoň tady to žije. Nikdy nezapomínej na svůj původ.', 'Klára: Neděkuj. Prostě jsem se nad tebou slitoval.', 'Klára: Žij. Dělej, co bys měl.', 'Spiška: Dejte mi všichni pokoj. Chci být o samotě.', 'Klára: Otravuju? Podivné…', 'Klára: Chci si tady jen na chvilku odpočinout…'];
+                    
+                    for (i = 0; i < inarr.length; i++) {
+                    
+                    $('.'+inarr[i]).each(function(index, obj)
+                    {
+                      $(this).text($(this).text()+textarr[i]);
+                    });
+                    }
+                    </script>
+                    </body>
+                    </html>
