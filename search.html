@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pathologic Search</title>
+    <link
+        rel="stylesheet"
+        href="searchstyle.css"
+    >
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+<body>
+  <div class="container">
+    <div class="top-layout">
+        <!-- LEFT -->
+        <div class="search-column">
+        <!--    <h1>Pathologic Dialogue Search is on TECHNICAL BREAK</h1>
+			<h1>EVERYTHING IS BROKEN NOW</h1>
+			<h2 id="reindexStatus">Checking reindex status...</h2> -->
+
+   <div class="title-row">
+
+    <h1>
+        Pathologic Dialogue Search
+    </h1>
+
+    <a
+        href="/searchhelp"
+        class="help-link"
+    >
+        Search tips
+    </a>
+
+</div>
+
+
+
+            <!-- SEARCH INPUT -->
+			<div class="searchbar">
+				<input
+					id="searchInput"
+					type="text"
+					placeholder="Search dialogue..."
+				>
+				<label class="wholeword">
+					<input
+						type="checkbox"
+						id="wholeWord"
+					>
+					Whole word
+				</label>
+			</div>
+
+			<!-- LANGUAGE FILTER -->
+			<div class="filters">
+				<label>
+					Language:
+					<select id="languageMode">
+						<option value="all">
+							All languages
+						</option>
+						<option value="custom">
+							Selected languages
+						</option>
+					</select>
+				</label>
+				<div
+					id="languageList"
+					class="language-list"
+					style="display:none"
+				>
+					<div>
+						<label><input type="checkbox" value="en">English</label>
+						<label><input type="checkbox" value="ru">Russian</label>
+						<label><input type="checkbox" value="pt">Portuguese</label>
+						<label><input type="checkbox" value="ko">Korean</label>
+					
+						<label><input type="checkbox" value="cs">Czech</label>
+						<label><input type="checkbox" value="de">German</label>
+						<label><input type="checkbox" value="it">Italian</label>
+						<label><input type="checkbox" value="pl">Polish</label>
+					</div>
+				</div>
+			</div>
+
+			<!-- GAME FILTER -->
+			<div class="filters">
+				<label>
+					Game:
+					<select id="gameMode">
+						<option value="all">
+							All games
+						</option>
+							<option value="custom">
+							Selected games
+						</option>
+					</select>
+				</label>
+				<div
+					id="gameList"
+					class="game-list"
+					style="display:none"
+				>
+					<label><input type="checkbox" value="p3">Pathologic 3</label>
+					<label><input type="checkbox" value="p2">Pathologic 2</label>
+					<label><input type="checkbox" value="hd">Classic HD</label>
+					<label><input type="checkbox" value="utopia">Utopia</label>
+					<label><input type="checkbox" value="demo">Demo</label>
+					<label><input type="checkbox" value="pre">Pre-release</label>
+				</div>
+			</div>
+			<!-- SEARCH BUTTON -->
+			<div class="search-actions">
+				<button id="searchButton">
+						Search
+					</button>
+				<span
+					id="loading"
+					class="loading"
+					style="display:none"
+				>
+					Searching
+				</span>
+			</div>
+			
+		</div>
+		<!-- RIGHT -->
+		<div style="margin-top:26px"
+			id="topSearches"
+			class="top-searches"
+		>
+		</div>
+	</div>
+
+	<!-- RESULTS -->
+	<div id="results"></div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>
+            Found a bug, missing dialogue, or just want to say hi?
+        </p>
+        <p>
+            Contact:<a href="mailto:aglayax@gmail.com"> aglayax@gmail.com</a>
+        </p>
+        <p>
+            <a href="https://www.reddit.com/user/bananatarakota/">Reddit</a>
+        </p>
+        <p>
+          <a href="https://www.tumblr.com/pathologic-b">Tumblr</a>
+        </p>
+        <p>
+            All the texts are taken from <a href="https://pathologicdialogue.github.io/"> Pathologic Dialogue Github</a>
+        </p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
