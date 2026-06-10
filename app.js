@@ -28,6 +28,16 @@ const wholeWord =
         "wholeWord"
     );
 
+const normalizeSearch =
+    document.getElementById(
+        "normalizeSearch"
+    );
+
+const ignorePunctuation =
+    document.getElementById(
+        "ignorePunct"
+    );
+
 const languageMode =
     document.getElementById(
         "languageMode"
@@ -48,6 +58,10 @@ const gameList =
         "gameList"
     );
 
+const CLIENT_TAG =
+    "hamster";
+
+var searchInProgress = false;
 
 var plagueMessages = [
 
@@ -89,10 +103,19 @@ var plagueMessages = [
 // ---------- EVENTS ----------
 button.addEventListener("click", search);
 
-input.addEventListener("keydown", function(e) {
-        if (e.key === "Enter") {
+input.addEventListener(
+    "keydown",
+    function(e) {
+
+        if (
+            e.key === "Enter" &&
+            !searchInProgress
+        ) {
+
             search();
+
         }
+
     }
 );
 
@@ -113,6 +136,11 @@ loadTopSearches();
 
 // ---------- SEARCH ----------
 async function search() {
+
+    if (searchInProgress) {
+        return;
+    }
+
     const q =
         input.value.trim();
 
@@ -123,47 +151,69 @@ async function search() {
         return;
     }
 
-// ---------- PURE WILDCARD BLOCK ----------
+    // ---------- PURE WILDCARD BLOCK ----------
 
-if (isPureWildcard(q)) {
+    if (isPureWildcard(q)) {
 
-    results.innerHTML =
-    "<p>"
-    +
-    plagueMessages[
-        Math.floor(
-            Math.random() *
-            plagueMessages.length
-        )
-    ]
-    +
-    "</p>";
+        results.innerHTML =
+            "<p>"
+            +
+            plagueMessages[
+                Math.floor(
+                    Math.random() *
+                    plagueMessages.length
+                )
+            ]
+            +
+            "</p>";
 
+        return;
+    }
 
-    return;
-}
+    // ---------- EMPTY QUERY ----------
+
+    if (
+        isEmptyAfterPreparation(q)
+    ) {
+
+        results.innerHTML =
+            "<p>" +
+            plagueMessages[
+                Math.floor(
+                    Math.random() *
+                    plagueMessages.length
+                )
+            ] +
+            "</p>";
+
+        return;
+
+    }
 
     // ---------- BROAD SEARCH WARNING ----------
 
-if (isBroadSearch(q)) {
+    if (isBroadSearch(q)) {
 
-    var proceed =
-        confirm(
-            "Menkhu know the lines of the body.\n\n" +
-			"This search ignores most of them and may take some time.\n\n" +
-			"Continue?"
-        );
+        var proceed =
+            confirm(
+                "Menkhu know the lines of the body.\n\n" +
+                "This search ignores most of them and may take some time.\n\n" +
+                "Continue?"
+            );
 
-    if (!proceed) {
-        return;
+        if (!proceed) {
+            return;
+        }
     }
-}
 
     let url =
         "https://aglaya.pro/pathosearch/api/search?q=" +
-        encodeURIComponent(q);
+        encodeURIComponent(q) +
+        "&client=" +
+        encodeURIComponent(CLIENT_TAG);
 
     // ---------- LANGUAGE FILTER ----------
+
     appendFilter(
         {
             mode: languageMode,
@@ -172,8 +222,8 @@ if (isBroadSearch(q)) {
         }
     );
 
-
     // ---------- GAME FILTER ----------
+
     appendFilter(
         {
             mode: gameMode,
@@ -182,50 +232,66 @@ if (isBroadSearch(q)) {
         }
     );
 
-
     // ---------- WHOLE WORD ----------
+
     if (wholeWord.checked) {
         url += "&whole=1";
     }
 
+    // ---------- NORMALIZATION ----------
+
+    if (!normalizeSearch.checked) {
+        url += "&normalize=0";
+    }
+
+    // ---------- IGNORE PUNCTUATION ----------
+
+    if (ignorePunctuation.checked) {
+        url += "&punct=0";
+    }
 
     console.log("REQUEST", url);
 
-// ---------- predict backend mode ----------
+    // ---------- predict backend mode ----------
 
-var normalizedQ =
-    searchNormalize(q);
+    var normalizedQ =
+        searchNormalize(q);
 
-var queryTokens =
-    normalizedQ
-        .split(
-            /[^A-Za-z0-9\u0400-\u052F]+/
-        )
-        .filter(Boolean);
+    var queryTokens =
+        normalizedQ
+            .split(
+                /[^A-Za-z0-9\u0400-\u052F]+/
+            )
+            .filter(Boolean);
 
-var useIndex =
-    queryTokens.length &&
-    queryTokens.every(
-        function(token) {
-            return token.length >= 2;
-        }
-    );
+    var useIndex =
+        normalizeSearch.checked &&
+        q.indexOf("%") === -1 &&
+        q.indexOf("_") === -1 &&
+        queryTokens.length &&
+        queryTokens.every(
+            function(token) {
+                return token.length >= 2;
+            }
+        );
 
-// ---------- loading text ----------
+    // ---------- loading text ----------
 
-loading.style.display =
-    "inline";
+    loading.style.display =
+        "inline";
 
-loading.textContent =
-    useIndex
-        ?
-        "Searching"
-        :
-        "Searching without index — this may take a while";
+    loading.textContent =
+        useIndex
+            ?
+            "Searching"
+            :
+            "Searching without index — this may take a while";
 
-
+    searchInProgress = true;
+    button.disabled = true;
 
     try {
+
         const res =
             await fetch(url);
 
@@ -233,16 +299,33 @@ loading.textContent =
             await res.json();
 
         renderResults(data);
+
         loadTopSearches();
+
     }
     catch(err) {
+
         console.error(err);
-        results.innerHTML = "<p>Search error.</p>";
+
+        results.innerHTML =
+            "<p>Search error.</p>";
+
+    }
+    finally {
+
+        loading.style.display =
+            "none";
+
+        button.disabled =
+            false;
+
+        searchInProgress =
+            false;
+
     }
 
-    loading.style.display = "none";
-
     function appendFilter(config) {
+
         if (config.mode.value !== "custom") {
             return;
         }
@@ -253,9 +336,18 @@ loading.textContent =
             );
 
         // nothing selected -> select all
+
         if (!selected.length) {
-            selectAll(config.container);
-            selected = getSelectedValues(config.container);
+
+            selectAll(
+                config.container
+            );
+
+            selected =
+                getSelectedValues(
+                    config.container
+                );
+
         }
 
         url +=
@@ -515,33 +607,83 @@ function restoreCheckboxes(selector, values) {
 
 
 function applyTopSearch(row) {
-    input.value = row.query_text;
+
+    input.value =
+        row.query_text;
 
     // ---------- WHOLE WORD ----------
-    wholeWord.checked = !!row.whole_word;
+
+    wholeWord.checked =
+        !!row.whole_word;
+
+    // ---------- NORMALIZATION ----------
+
+    normalizeSearch.checked =
+        row.normalize_search
+            ? true
+            : false;
+
+    // ---------- IGNORE PUNCTUATION ----------
+
+    ignorePunctuation.checked =
+        row.ignore_punctuation
+            ? true
+            : false;
 
     // ---------- LANGUAGES ----------
+
     if (row.languages) {
-        languageMode.value = "custom";
-        languageList.style.display = "block";
-        restoreCheckboxes("#languageList", row.languages.split(","));
+
+        languageMode.value =
+            "custom";
+
+        languageList.style.display =
+            "block";
+
+        restoreCheckboxes(
+            "#languageList",
+            row.languages.split(",")
+        );
+
     }
     else {
-        languageMode.value = "all";
-        languageList.style.display = "none";
+
+        languageMode.value =
+            "all";
+
+        languageList.style.display =
+            "none";
+
     }
 
     // ---------- GAMES ----------
+
     if (row.games) {
-        gameMode.value = "custom";
-        gameList.style.display = "block";
-        restoreCheckboxes("#gameList", row.games.split(","));
+
+        gameMode.value =
+            "custom";
+
+        gameList.style.display =
+            "block";
+
+        restoreCheckboxes(
+            "#gameList",
+            row.games.split(",")
+        );
+
     }
     else {
-        gameMode.value = "all";
-        gameList.style.display = "none";
+
+        gameMode.value =
+            "all";
+
+        gameList.style.display =
+            "none";
+
     }
+
     search();
+
 }
 
 async function loadTopSearches() {
@@ -710,6 +852,41 @@ function isPureWildcard(q) {
     return /^[%_]+$/.test(
         normalized
     );
+}
+
+function isEmptyAfterPreparation(q) {
+
+    var prepared =
+        q;
+
+    if (
+        normalizeSearch &&
+        normalizeSearch.checked
+    ) {
+        prepared =
+            searchNormalize(
+                prepared
+            );
+    }
+
+    if (
+        ignorePunctuation &&
+        ignorePunctuation.checked
+    ) {
+        prepared =
+            prepared.replace(
+                /[^A-Za-z0-9\u00C0-\u024F\u0400-\u052F\s%_]/gu,
+                " "
+            );
+    }
+
+    prepared =
+        prepared
+            .replace(/\s+/g, "")
+            .replace(/[%_]/g, "");
+
+    return prepared.length === 0;
+
 }
 
 function searchNormalize(text) {
