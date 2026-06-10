@@ -59,7 +59,7 @@ const gameList =
     );
 
 const CLIENT_TAG =
-    "hamster";
+    "git";
 
 var searchInProgress = false;
 
