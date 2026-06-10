@@ -5,7 +5,7 @@
     <title>Pathologic Search</title>
     <link
         rel="stylesheet"
-        href="searchstyle.css"
+        href="style.css"
     >
     <link
         rel="preconnect"
@@ -28,8 +28,11 @@
    <div class="title-row">
 
     <h1>
-        Pathologic Dialogue Search
-    </h1>
+        Pathologic Dialogue Search is on TECHNICAL BREAK
+    </h1></br>
+
+<h3>Fixing old bugs, adding new ones</h3>
+
 
     <a
         href="/searchhelp"
@@ -44,19 +47,42 @@
 
             <!-- SEARCH INPUT -->
 			<div class="searchbar">
-				<input
-					id="searchInput"
-					type="text"
-					placeholder="Search dialogue..."
-				>
-				<label class="wholeword">
-					<input
-						type="checkbox"
-						id="wholeWord"
-					>
-					Whole word
-				</label>
-			</div>
+    <input
+        id="searchInput"
+        type="text"
+        placeholder="Search dialogue..."
+    >
+</div>
+
+<div class="search-options">
+
+    <label class="wholeword">
+        <input
+            type="checkbox"
+            id="wholeWord"
+        >
+        Whole word
+    </label>
+
+    <label class="wholeword">
+        <input
+            type="checkbox"
+            id="normalizeSearch"
+            checked
+        >
+        Character normalization
+    </label>
+
+    <label class="wholeword">
+        <input
+            type="checkbox"
+            id="ignorePunct"
+            checked
+        >
+        Ignore punctuation
+    </label>
+
+</div>
 
 			<!-- LANGUAGE FILTER -->
 			<div class="filters">
