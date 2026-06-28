@@ -898,11 +898,14 @@ function searchNormalize(text) {
         // h / x family
         .replace(/[һhхx]/g, "х")
         // o family
-        .replace(/[oоөѳ]/g, "о")
+        .replace(/[öoоөѳ]/g, "о")
         // u family
         .replace(/[уyү]/g, "у")
         // elipsis
         .replace(/[…]/g, "...")
         // е family
-        .replace(/[ёeе]/g, "e")
+        .replace(/[ёëeе]/g, "e")
+.replace(/[üü]/g, "u")
+.replace(/[äaа]/g, "a")
+.replace(/[öö]/g, "o");
 }
